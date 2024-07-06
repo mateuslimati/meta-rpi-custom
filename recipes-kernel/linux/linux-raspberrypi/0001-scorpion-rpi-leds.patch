@@ -1,0 +1,22 @@
+From cdc2322b20da3d652677ca4aad8740b056fd3fed Mon Sep 17 00:00:00 2001
+From: Mateus Alves <mateuslima.ti@gmail.com>
+Date: Mon, 6 May 2024 10:24:39 -0300
+Subject: [PATCH] scorpion-rpi leds.
+
+---
+ arch/arm/boot/dts/bcm2710-rpi-3-b-plus.dts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm/boot/dts/bcm2710-rpi-3-b-plus.dts b/arch/arm/boot/dts/bcm2710-rpi-3-b-plus.dts
+index 5f248fb01bca..6b75bfdc1e67 100644
+--- a/arch/arm/boot/dts/bcm2710-rpi-3-b-plus.dts
++++ b/arch/arm/boot/dts/bcm2710-rpi-3-b-plus.dts
+@@ -233,7 +233,7 @@ &i2s {
+ &leds {
+ 	act_led: led-act {
+ 		label = "led0";
+-		linux,default-trigger = "mmc0";
++		linux,default-trigger = "timer";
+ 		gpios = <&gpio 29 0>;
+ 	};
+ 
